@@ -20,14 +20,14 @@
               text: "Your symptoms"
             },
             value: {
-              text: <data value="" class="whatareyoursymptoms"></data>
+              text: data.whatareyoursymptoms
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "/symptoms",
                   text: "Change",
-                  visuallyHiddenText: "NHS number"
+                  visuallyHiddenText: "what are your symptoms"
 
           
                 }
@@ -39,12 +39,12 @@
               text: "Details of your symptoms"
             },
             value: {
-              html: "8 Bridgewater Place<br>Leeds<br>LS11 5BZ"
+              text: data.moredetailsaboutsymptoms
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "/details",
                   text: "Change",
                   visuallyHiddenText: "home address"
                 }
