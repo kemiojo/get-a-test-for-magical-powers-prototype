@@ -3,6 +3,13 @@
 {% from "button/macro.njk" import button %}
 {% from "summary-list/macro.njk" import summaryList %}
 
+{% block beforeContent %}
+  {{ backLink({
+    href: "/address",
+    text: "Back"
+  }) }}
+{% endblock %}
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
@@ -40,6 +47,23 @@
             },
             value: {
               text: data.moredetailsaboutsymptoms
+            },
+            actions: {
+              items: [
+                {
+                  href: "/details",
+                  text: "Change",
+                  visuallyHiddenText: "home address"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Your Address"
+            },
+            value: {
+              text: data.youraddress
             },
             actions: {
               items: [

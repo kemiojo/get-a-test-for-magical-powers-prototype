@@ -1,9 +1,15 @@
 {% extends "layout.html"%}
+{% block beforeContent %}
+  {{ backLink({
+    href: "/details",
+    text: "Back"
+  }) }}
+{% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/answer-symptoms" method="post" novalidate>
+      <form action="/answers" method="post" novalidate>
 
 
 <span class="nhsuk-caption-l">About you</span>
@@ -14,7 +20,10 @@
 {{ textarea({
   label: {
     
-  }
+  },
+  id: "youraddress",
+  name: "youraddress",
+  value: data.youraddress
   
 }) }}
  {{ button({
