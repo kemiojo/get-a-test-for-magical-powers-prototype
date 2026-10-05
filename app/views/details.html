@@ -18,17 +18,21 @@
     <div class="nhsuk-grid-column-two-thirds">
       <form action="/form-handler" method="post" novalidate>
 
-        {{ input({
-          label: {
-            text: "What is your home postcode?",
-            size: "l",
-            isPageHeading: true
-          },
-          id: "postcode",
-          name: "postcode",
-          width: 10,
-          autocomplete: "postal-code"
-        }) }}
+        {% from "textarea/macro.njk" import textarea %}
+
+{{ textarea({
+  label: {
+    text: "Can you provide more detail about your symptoms?",
+    size: "l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "For example, if you have tiny wings sprouting from your back"
+  },
+  id: "example",
+  name: "example"
+}) }}
+
 
         {{ button({
           text: "Continue"
